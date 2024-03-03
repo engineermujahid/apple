@@ -7,3 +7,7 @@
 main {
     flex: 1 0 auto;
 }
+
+header {
+    background-color: rgba(22, 22, 23, .8);
+}
