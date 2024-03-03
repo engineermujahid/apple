@@ -24,8 +24,8 @@ export default function Topnav() {
 
     return (
         <>
-            <header className=' text-[#d0d0d0] fixed w-full top-0'>
-                <nav className='py-2 mx-auto w-full max-w-[1024px] flex items-center justify-between'>
+            <header className='text-[#d0d0d0] h-11 fixed w-full top-0 z-50'>
+                <nav className='mx-auto w-full max-w-[1024px] flex items-center justify-between'>
                     <div className='px-2 text-2xl' >
                         <span className='cursor-pointer'>
                             <Link to="/">
