@@ -131,7 +131,7 @@ export default function Store() {
                     direction="horizontal"
                 >
                     {/* Slides */}
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden">
                             <div className="">
@@ -145,7 +145,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -159,7 +159,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -173,7 +173,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -187,7 +187,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -201,7 +201,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -215,7 +215,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -238,12 +238,12 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={1}
+                    spaceBetween={300}
                     slidesPerView={4}
                     direction="horizontal"
                 >
                     {/* Slides */}
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -257,7 +257,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -271,7 +271,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -285,7 +285,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -299,7 +299,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -313,7 +313,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -327,7 +327,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -345,7 +345,7 @@ export default function Store() {
                 </Swiper>
             </div>
 
-            {/* The apple store diffrence */}
+            {/* The apple store difference */}
             <h1 className="flex text-3xl font-medium mt-24 mx-12 pl-24">The Apple Store difference.<p className="text-3xl font-medium text-gray-500">&nbsp;Even more reasons to shop with us.</p></h1>
 
             <div className='mt-5 mx-8 pl-24'>
@@ -355,7 +355,7 @@ export default function Store() {
                     direction="horizontal"
                 >
                     {/* Slides */}
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[240px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="m-3 mt-5">
@@ -368,7 +368,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[240px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="m-3 mt-5">
@@ -381,7 +381,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[240px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="m-3 mt-5">
@@ -394,7 +394,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[240px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="m-3 mt-5">
@@ -407,7 +407,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[240px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="m-3 mt-5">
@@ -420,7 +420,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[240px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="m-3 mt-5">
@@ -433,7 +433,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[240px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="m-3 mt-5">
@@ -446,7 +446,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[240px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="m-3 mt-5">
@@ -469,15 +469,15 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={10}
-                    slidesPerView={5}
+                    spaceBetween={300}
+                    slidesPerView={6}
                     direction="horizontal"
 
                 >
                     {/* Slides */}
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5 pr-28'>
                         {/* Card content */}
-                        <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden">
+                        <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
                                 <h2 className="text-md font-medium m-3 text-gray-500">APPLE VISION PRO</h2>
                                 <h3 className="text-2xl font-bold m-3">Welcome to spatial computing</h3>
@@ -489,7 +489,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -503,7 +503,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -517,7 +517,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -531,7 +531,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -545,7 +545,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -559,7 +559,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -583,13 +583,13 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={10}
-                    slidesPerView={5}
+                    spaceBetween={300}
+                    slidesPerView={6}
                     direction="horizontal"
 
                 >
                     {/* Slides */}
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5 pr-28'>
                         {/* Card content */}
                         <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden">
                             <div className="">
@@ -603,7 +603,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -617,7 +617,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -631,7 +631,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -645,7 +645,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -659,7 +659,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -673,7 +673,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -697,12 +697,12 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={1}
+                    spaceBetween={300}
                     slidesPerView={4}
                     direction="horizontal"
                 >
                     {/* Slides */}
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -716,7 +716,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -730,7 +730,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -744,7 +744,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -758,7 +758,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -772,7 +772,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -786,7 +786,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -810,13 +810,13 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={10}
-                    slidesPerView={5}
+                    spaceBetween={300}
+                    slidesPerView={6}
                     direction="horizontal"
 
                 >
                     {/* Slides */}
-                    <SwiperSlide style={{ marginRight: '90px' }}>
+                    <SwiperSlide className='pt-5 pb-5 pr-28'>
                         {/* Card content */}
                         <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden">
                             <div className="">
@@ -830,7 +830,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -844,7 +844,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -858,7 +858,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -872,7 +872,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -886,7 +886,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
@@ -900,7 +900,7 @@ export default function Store() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
                         <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
                             <div className="">
