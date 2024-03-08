@@ -1,18 +1,8 @@
-import React, { useRef, useState } from 'react';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 
 export default function Store() {
-    const carouselRef = useRef(null);
-
-    const scrollLeft = () => {
-        carouselRef.current.scrollLeft -= carouselRef.current.offsetWidth;
-    };
-
-    const scrollRight = () => {
-        carouselRef.current.scrollLeft += carouselRef.current.offsetWidth;
-    };
 
     return (
         <div className='pt-40 bg-neutral-100'>
@@ -216,7 +206,7 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={450}
+                    spaceBetween={300}
                     slidesPerView={4}
                     direction="horizontal"
                 >
@@ -412,111 +402,107 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={100}
+                    spaceBetween={-20}
                     slidesPerView={5}
                     direction="horizontal"
 
                 >
                     {/* Slides */}
-                    <SwiperSlide className='pt-5 pb-5 pr-80'>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-xs font-medium m-3 text-gray-500">APPLE VISION PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Welcome to spatial computing</h3>
-                                <p className="text-gray-600 m-3">From $3499 or 291.58/mo. for 12mo.</p>
+                        <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-accessories-202403?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1707850589330")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div>
+                                <h3 className="text-3xl font-semibold mt-8 ml-4">In with the new.</h3>
+                                <p className="ml-4 mt-2 text-lg">Discover fresh new colors for your favorite accessories.</p>
                             </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 1" className="w-full h-auto object-cover" />
+                        </div>
+
+                    </SwiperSlide>
+                    {/* margin left works but margin right on the first slide doesnt work...and padding only fixes that slide but margin fixes other slides as well */}
+                    <SwiperSlide className='pt-5 pb-5 ml-24'>
+                        {/* Card content */}
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWND3?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1708125477348" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT263?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1699475074951" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MW4Q3?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1707853692193" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWMW3ref?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1707791910829" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT4U3?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1693594248668" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT2M3?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1699644802878" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWND3?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1708125477348" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
-                    {/* Add more slides as needed */}
                 </Swiper>
             </div>
 
@@ -526,111 +512,95 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={100}
+                    spaceBetween={-20}
                     slidesPerView={5}
                     direction="horizontal"
 
                 >
                     {/* Slides */}
-                    <SwiperSlide className='pt-5 pb-5 pr-80'>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden">
-                            <div className="">
-                                <h2 className="text-xs font-medium m-3 text-gray-500">APPLE VISION PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Welcome to spatial computing</h3>
-                                <p className="text-gray-600 m-3">From $3499 or 291.58/mo. for 12mo.</p>
+                        <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-applemusic-202301?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1670389217380")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div>
+                                <h3 className="text-3xl font-semibold mt-8 ml-4">Get 6 months of <br /> Apple music free.</h3>
+                                <p className="ml-4 mt-2 text-lg">Included with Homepod, Airpods, <br /> or select Beat products.</p>
                             </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 1" className="w-full h-auto object-cover" />
+                        </div>
+
+                    </SwiperSlide>
+                    {/* margin left works but margin right on the first slide doesnt work...and padding only fixes that slide but margin fixes other slides as well */}
+                    <SwiperSlide className='pt-5 pb-5 ml-24'>
+                        {/* Card content */}
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTJV3?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1694014871985" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-select-midnight-202210?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1670557210097" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-mini-select-yellow-202110?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1632925510000" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-silver-202011?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1604021221000" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MME73?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1632861342000" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[310px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative">
+
+                            <div className='flex flex-col p-5 pt-12'>
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQLK3?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1682361480894" className='w-[230px] h-[230px]' alt="" />
+                                <h2 className="text-sm font-normal mt-8 text-orange-700">New</h2>
+                                <h3 className="text-md font-medium mt-2">iPhone 15 Silicone Case with MagSafe - Light Blue</h3>
+                                <p className="text-gray-600 mt-10">$49.00</p>
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className='pt-5 pb-5'>
-                        {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    {/* Add more slides as needed */}
                 </Swiper>
             </div>
 
@@ -640,58 +610,52 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={400}
+                    spaceBetween={300}
                     slidesPerView={4}
                     direction="horizontal"
                 >
                     {/* Slides */}
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-xs font-medium m-3 text-gray-500">APPLE VISION PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Welcome to spatial computing</h3>
-                                <p className="text-gray-600 m-3">From $3499 or 291.58/mo. for 12mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 1" className="w-full h-auto object-cover" />
+                        <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-tv-services-202303?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1706548659792")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div>
+                                <h2 className="text-xs font-medium m-3 text-white">APPLE TV+</h2>
+                                <h3 className="text-3xl font-medium leading-tight m-3 text-white">Get 3 months of Apple&nbsp;TV+ free when you buy an Apple&nbsp;device.°</h3>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-specialist-help-202309?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1701194078821")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                        <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-subscriptions-202108_GEO_US?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1626375546000")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                             <div>
-                                <h2 className="text-xs font-medium m-3 text-gray-500">APPLE SPECIALIST</h2>
-                                <h3 className="text-3xl font-medium leading-tight m-3">Shop one on one with a Specialist. Online or in a store.</h3>
+                                <h3 className="text-3xl font-medium leading-tight ml-3 mt-9">Six apple services. <br /> one easy subscription.</h3>
+
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-specialist-help-202309?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1701194078821")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                        <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-applecare-202309?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1692730497948")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                             <div>
-                                <h2 className="text-xs font-medium m-3 text-gray-500">APPLE SPECIALIST</h2>
-                                <h3 className="text-3xl font-medium leading-tight m-3">Shop one on one with a Specialist. Online or in a store.</h3>
+                                <h3 className="text-3xl font-medium leading-tight ml-3 mt-9">We've got you covered.</h3>
+                                <h5 className='text-lg font-normal leading-tight m-3'>AppleCare+ now comes with unlimited repairs for accidental damage protection.</h5>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-specialist-help-202309?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1701194078821")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                        <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-applepay-202303?wid=960&hei=1000&fmt=jpeg&qlt=90&.v=1677655420359")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                             <div>
-                                <h2 className="text-xs font-medium m-3 text-gray-500">APPLE SPECIALIST</h2>
-                                <h3 className="text-3xl font-medium leading-tight m-3">Shop one on one with a Specialist. Online or in a store.</h3>
+                                <h3 className="text-3xl font-medium leading-tight ml-3 mt-9">Discover all the ways to use Apple Pay.</h3>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-specialist-help-202309?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1701194078821")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                        <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-homekit-202309?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1692730632477")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                             <div>
-                                <h2 className="text-xs font-medium m-3 text-gray-500">APPLE SPECIALIST</h2>
-                                <h3 className="text-3xl font-medium leading-tight m-3">Shop one on one with a Specialist. Online or in a store.</h3>
+                                <h2 className="text-xs font-medium m-3 text-gray-500">HOME</h2>
+                                <h3 className="text-3xl font-medium leading-tight m-3">See how one app can control your entire home.</h3>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -723,111 +687,70 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={100}
-                    slidesPerView={5}
+                    spaceBetween={-20}
+                    slidesPerView={4}
                     direction="horizontal"
-
                 >
                     {/* Slides */}
-                    <SwiperSlide className='pt-5 pb-5 pr-80'>
+                    <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden">
-                            <div className="">
-                                <h2 className="text-xs font-medium m-3 text-gray-500">APPLE VISION PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Welcome to spatial computing</h3>
-                                <p className="text-gray-600 m-3">From $3499 or 291.58/mo. for 12mo.</p>
+                        <div className="w-[480px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-50-carriertrade-202309?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1693606978377")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div>
+                                <h2 className="text-xs font-medium m-3 text-gray-500">CARRIER TRADE-IN DEALS</h2>
+                                <h3 className="text-3xl font-medium leading-tight m-3">iPhone carrier deals. Right&nbsp;here at Apple. For&nbsp;as&nbsp;low&nbsp;as&nbsp;$0.¹ .</h3>
+                                <h5 className='ml-3'>Includes trade-in and carrier credits. <br /> AT&amp;T:&nbsp;up to $1000. T-Mobile: up to $800. <br /> Verizon: up to $830.</h5>
                             </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 1" className="w-full h-auto object-cover" />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className='pt-5 pb-5 ml-20'>
+                        {/* Card content */}
+                        <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-mac-card-40-education-202402_GEO_US?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1708288270822")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div>
+                                <h2 className="text-xs font-medium m-3 text-gray-500">EDUCATION</h2>
+                                <h3 className="text-3xl font-medium leading-tight m-3">Save on a new mac with education pricing.</h3>
+
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-business-202209?wid=800&hei=1000&fmt=jpeg&qlt=90&.v=1660927783133")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div>
+                                <h2 className="text-xs font-medium m-3 text-gray-500">BUSINESS</h2>
+                                <h3 className="text-3xl font-medium leading-tight m-3 text-white">From enterprise to small business, we'll work with you.</h3>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
+                        <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-gov-202402?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1707259305816")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div>
+                                <h2 className="text-xs font-medium m-3 text-gray-500">GOVERNMENT</h2>
+                                <h3 className="text-3xl font-medium leading-tight m-3">Special pricing is available for state, local, federal agencies.</h3>
                             </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide className='pt-5 pb-5'>
+                        {/* Card content */}
+                        <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-veteran-202309?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1708061012884")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div>
+                                <h2 className="text-xs font-medium m-3 text-gray-500">TODAY AT APPLE</h2>
+                                <h3 className="text-3xl font-medium leading-tight m-3">Join free sessions at your <br /> Apple store.</h3>
+                                <h5 className='font-light leading-tight m-3'>Learn about the latest features and how to go furthur with your Apple devices</h5>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='pt-5 pb-5'>
                         {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
+                        <div className="w-[400px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col overflow-hidden relative" style={{ backgroundImage: 'url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-refurb-202402?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1707259306111")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div>
+                                <h2 className="text-xs font-medium m-3 text-gray-500">TODAY AT APPLE</h2>
+                                <h3 className="text-3xl font-medium leading-tight m-3">Join free sessions at your <br /> Apple store.</h3>
+                                <h5 className='font-light leading-tight m-3'>Learn about the latest features and how to go furthur with your Apple devices</h5>
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className='pt-5 pb-5'>
-                        {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='pt-5 pb-5'>
-                        {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='pt-5 pb-5'>
-                        {/* Card content */}
-                        <div className="w-[320px] h-[500px] mx-3 rounded-3xl bg-white shadow-md p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col">
-                            <div className="">
-                                <h2 className="text-md font-medium m-3 text-gray-500">IPHONE 15 PRO</h2>
-                                <h3 className="text-2xl font-bold m-3">Titanium</h3>
-                                <p className="text-gray-600 m-3">From $999 or 41.62/mo. for 24mo.</p>
-                            </div>
-                            <div className="flex-1"></div>
-                            <div className="mt-auto mb-5">
-                                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Title 2" className="w-full h-auto object-cover" />
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    {/* Add more slides as needed */}
                 </Swiper>
             </div>
 
