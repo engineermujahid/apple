@@ -1,0 +1,24 @@
+.watchS9 {
+    background-image: url("../../assets/images/apppleWatch/tile_s9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.watchUltra {
+    background-image: url("../../assets/images/apppleWatch/tile_ultra_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.watchSE {
+    background-image: url("../../assets/images/apppleWatch/tile_watch_se.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.carbon-neutral {
+    background-image: url("../../assets/images/apppleWatch/carbon_neutral.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 100%;
+}
