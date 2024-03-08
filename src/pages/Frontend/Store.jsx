@@ -206,7 +206,7 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={300}
+                    spaceBetween={400}
                     slidesPerView={4}
                     direction="horizontal"
                 >
@@ -402,7 +402,7 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={-20}
+                    spaceBetween={20}
                     slidesPerView={5}
                     direction="horizontal"
 
@@ -512,7 +512,7 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={-20}
+                    spaceBetween={20}
                     slidesPerView={5}
                     direction="horizontal"
 
@@ -610,7 +610,7 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={300}
+                    spaceBetween={450}
                     slidesPerView={4}
                     direction="horizontal"
                 >
@@ -687,7 +687,7 @@ export default function Store() {
 
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={-20}
+                    spaceBetween={100}
                     slidesPerView={4}
                     direction="horizontal"
                 >

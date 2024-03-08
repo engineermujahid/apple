@@ -169,7 +169,7 @@ export default function Mac() {
 
                         <h3 className='font-light px-8 mt-3'>Strikingly thin and fast so you can work, play, or create anywhere.</h3>
 
-                        <h3 className='font-semibold mt-4'>From $999 or $83.25/mo. for 12 mo.*</h3>
+                        <h3 className='font-semibold mt-4'>From $999 or $83.25/mo.</h3>
 
                         <div className='flex mt-10 items-center'>
                             <h2 className='bg-blue-600 text-white rounded-3xl px-6 py-2 hover:bg-blue-500 hover:cursor-pointer'>Learn more</h2>
@@ -205,19 +205,19 @@ export default function Mac() {
                     {/* Product Details */}
                     <div className="mt-4 text-center flex flex-col">
 
-                        <h2 className="text-2xl font-semibold">MacBook Pro 14” and 16”</h2>
+                        <h2 className="text-2xl font-semibold">MacBook Pro 16”</h2>
                         <h3 className='font-semibold'>M3, M3 Pro, or M3 Max chip</h3>
 
                         <h3 className='font-light px-8 mt-3'>The most advanced Mac laptops for demanding workflows.</h3>
 
-                        <h3 className='font-semibold mt-4'>From $1599 or $133.25/mo. for 12 mo.*</h3>
+                        <h3 className='font-semibold mt-4'>From $1599 or $133.25/mo.</h3>
 
                         <div className='flex mt-10 items-center'>
                             <h2 className='bg-blue-600 text-white rounded-3xl px-6 py-2 hover:bg-blue-500 hover:cursor-pointer'>Learn more</h2>
                             <h2 className='text-blue-500 ml-9 hover:underline hover:cursor-pointer'>Buy &gt;</h2>
                         </div>
 
-                        <div className='mt-8 border-b-black border-b -mx-8'></div>
+                        <div className='mt-[33px] border-b-black border-b -mx-8'></div>
 
                         <h2 className="text-3xl font-semibold mt-8">13.6” or 15.3”</h2>
                         <h3 className='font-normal text-xs mt-2'>Liquid Retina display with 500 nits of brightness and support for 1 billion colors</h3>
@@ -263,7 +263,7 @@ export default function Mac() {
             {/* Card section */}
             <div className='mt-5 mx-8 pl-24'>
                 <Swiper
-                    spaceBetween={-150}
+                    spaceBetween={10}
                     slidesPerView={4}
                     direction="horizontal"
                 >
