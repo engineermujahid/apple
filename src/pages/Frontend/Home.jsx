@@ -3,8 +3,18 @@ import "./Home.css";
 
 import { Link } from "react-router-dom";
 import Slider from "../../components/HomeSlider/Slider";
+import { useBag } from "../../components/BagProvider";
 
 export default function Home() {
+    const { addToBag } = useBag();
+
+    const handleBuy = (name, price) => {
+        const item = {
+            name: name,
+            price: price,
+        };
+        addToBag(item); // Call addToBag function to add the item to the bag
+    };
     return (
         <>
             <div>
@@ -16,7 +26,7 @@ export default function Home() {
                             <Link className=" hover:underline">Learn More</Link> &#62;
                         </span>
                         <span className="ms-10 text-xl tracking-tight text-[#2997ff]">
-                            <Link className=" hover:underline">Buy</Link> &#62;
+                            <Link className=" hover:underline" onClick={() => handleBuy("iPhone 15 Pro", 999)}>Buy</Link> &#62;
                         </span>
                     </div>
                 </div>
@@ -29,7 +39,7 @@ export default function Home() {
                                 <Link className=" hover:underline">Learn More</Link> &#62;
                             </span>
                             <span className="ms-10 text-xl tracking-tight text-[#2997ff]">
-                                <Link className=" hover:underline">Buy</Link> &#62;
+                                <Link className=" hover:underline" onClick={() => handleBuy("iPhone 15", 799)}>Buy</Link> &#62;
                             </span>
                         </div>
                     </div>
@@ -44,7 +54,7 @@ export default function Home() {
                                     <Link className=" hover:underline">Learn More</Link> &#62;
                                 </span>
                                 <span className="ms-10 text-xl text-[#2997ff] tracking-tight">
-                                    <Link className=" hover:underline">Buy</Link> &#62;
+                                    <Link className=" hover:underline" onClick={() => handleBuy("Apple Vision Pro", 999)}>Buy</Link> &#62;
                                 </span>
                             </div>
                         </div>
@@ -62,7 +72,7 @@ export default function Home() {
                                 <Link className=" hover:underline">Learn More</Link> &#62;
                             </span>
                             <span className="ms-10 text-xl text-[#2997ff] tracking-tight">
-                                <Link className=" hover:underline">Buy</Link> &#62;
+                                <Link className=" hover:underline" onClick={() => handleBuy("Apple Watch", 999)}>Buy</Link> &#62;
                             </span>
                         </div>
                     </div>
@@ -76,7 +86,7 @@ export default function Home() {
                                 <Link className=" hover:underline">Learn More</Link> &#62;
                             </span>
                             <span className="ms-10 text-2xl text-[#2997ff] teacking-tight">
-                                <Link className=" hover:underline">Buy</Link> &#62;
+                                <Link className=" hover:underline" onClick={() => handleBuy("MacBook Pro", 999)}>Buy</Link> &#62;
                             </span>
                         </div>
                     </div>
@@ -90,7 +100,7 @@ export default function Home() {
                                 <Link className=" hover:underline">Learn More</Link> &#62;
                             </span>
                             <span className="ms-10 text-xl teacking-tight text-[#2997ff]">
-                                <Link className=" hover:underline">Buy</Link> &#62;
+                                <Link className=" hover:underline" onClick={() => handleBuy("iPad", 999)}>Buy</Link> &#62;
                             </span>
                         </div>
                     </div>
@@ -104,7 +114,7 @@ export default function Home() {
                                 <Link className=" hover:underline">Learn More</Link> &#62;
                             </span>
                             <span className="ms-10 text-xl teacking-tight text-[#2997ff]">
-                                <Link className=" hover:underline">Buy</Link> &#62;
+                                <Link className=" hover:underline" onClick={() => handleBuy("Airpods Pro", 999)}>Buy</Link> &#62;
                             </span>
                         </div>
                     </div>
@@ -120,7 +130,7 @@ export default function Home() {
                                 <Link className=" hover:underline">Learn More</Link> &#62;
                             </span>
                             <span className="ms-10 text-xl teacking-tight text-[#2997ff]">
-                                <Link className=" hover:underline">Buy</Link> &#62;
+                                <Link className=" hover:underline" onClick={() => handleBuy("Apple Card", '-3%')}>Buy</Link> &#62;
                             </span>
                         </div>
                     </div>
@@ -136,7 +146,7 @@ export default function Home() {
                                 <Link className=" hover:underline">Learn More</Link> &#62;
                             </span>
                             <span className="ms-10 text-xl teacking-tight text-[#2997ff]">
-                                <Link className=" hover:underline">Buy</Link> &#62;
+                                <Link className=" hover:underline" onClick={() => handleBuy("Trade In", '-15%')}>Buy</Link> &#62;
                             </span>
                         </div>
                     </div>

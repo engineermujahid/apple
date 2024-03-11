@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useBeforeUnload } from "react-router-dom";
 import "./Watch.css";
 
 import watchNavAcc from "../../assets/images/apppleWatch/watch_nav_accessories.svg";
@@ -19,8 +19,18 @@ import logoWatchS9 from "../../assets/images/apppleWatch/logo_watch_s9.png";
 import logoWatchultra2 from "../../assets/images/apppleWatch/logo_watch_ultra_2.png";
 import logoWatSE from "../../assets/images/apppleWatch/logo_watch_se.png";
 import logoCarbonNeutral from "../../assets/images/apppleWatch/logo_carbon_neutral.png";
+import { useBag } from "../../components/BagProvider";
 
 export default function Watch() {
+    const { addToBag } = useBag();
+
+    const handleBuy = (name, price) => {
+        const item = {
+            name: name,
+            price: price,
+        };
+        addToBag(item); // Call addToBag function to add the item to the bag
+    };
     return (
         <>
             <div className="">
@@ -30,7 +40,7 @@ export default function Watch() {
                             <div className="h-20 flex flex-col justify-between">
                                 <img src={watchNavS8} className="w-6 object-contain mx-auto" alt="" />
                                 <label>
-                                    Apple atch <br /> Series 9
+                                    Apple Watch <br /> Series 9
                                 </label>
                             </div>
                         </li>
@@ -134,11 +144,12 @@ export default function Watch() {
             <div className="pt-8 mb-6 bg-black">
                 <div className="pt-6 text-center text-white">
                     <img src={logoWatchS9} className="h-16 mx-auto" alt="" />
-                    <h2 className="text-[48px] my-3 font-semibold tracking-tight">Smatter. Brighter. Mightier.</h2>
+                    <h2 className="text-[48px] my-3 font-semibold tracking-tight">Smarter. Brighter. Mightier.</h2>
                     <h3 className="mb-3 text-[21px]">From $399 </h3>
                     <button
                         type="button"
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        onClick={() => handleBuy('Apple Watch S9', 399)}
                     >
                         <Link> Buy</Link>
                     </button>
@@ -161,6 +172,7 @@ export default function Watch() {
                     <button
                         type="button"
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        onClick={() => handleBuy('Apple Watch Ultra 2', 799)}
                     >
                         <Link> Buy</Link>
                     </button>
@@ -179,6 +191,7 @@ export default function Watch() {
                         <button
                             type="button"
                             class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            onClick={() => handleBuy('Apple Watch SE', 249)}
                         >
                             <Link> Buy</Link>
                         </button>
