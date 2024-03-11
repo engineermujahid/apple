@@ -19,7 +19,19 @@ import logoWatchS9 from "../../assets/images/apppleWatch/logo_watch_s9.png";
 import logoWatchultra2 from "../../assets/images/apppleWatch/logo_watch_ultra_2.png";
 import logoWatSE from "../../assets/images/apppleWatch/logo_watch_se.png";
 import logoCarbonNeutral from "../../assets/images/apppleWatch/logo_carbon_neutral.png";
+<<<<<<< HEAD
 import { useBag } from "../../components/BagProvider";
+=======
+import comp_se from "../../assets/images/apppleWatch/compare_se.jpg";
+import comp_s9 from "../../assets/images/apppleWatch/compare_s9.jpg";
+import comp_ultra from "../../assets/images/apppleWatch/compare_ultra2.jpg";
+import logo_fitness from "../../assets/images/apppleWatch/logo_fitness.png";
+import cto_case from "../../assets/images/apppleWatch/cto-case.png";
+
+import icon1 from "../../assets/images/apppleWatch/icon_1.svg";
+import icon2 from "../../assets/images/apppleWatch/icon_2.svg";
+import icon3 from "../../assets/images/apppleWatch/icon_3.svg";
+>>>>>>> 2563b06 (watch page completed)
 
 export default function Watch() {
     const { addToBag } = useBag();
@@ -137,7 +149,7 @@ export default function Watch() {
                 <div class="w-[92%] min-[734px]:w-[80%] mx-auto text-center text-sm">
                     <p>
                         Get 3 months of Apple Fitness+ When you buy an Apple Wathc.
-                        <Link className="text-[#2997ff]">Learn more &gt;</Link>
+                        <Link className="text-[#0066cc]">Learn more &gt;</Link>
                     </p>
                 </div>
             </div>
@@ -155,10 +167,10 @@ export default function Watch() {
                     </button>
                     <p className="text-[21px]">
                         <span className="me-6">
-                            <Link className="text-[#2997ff]">Learn more &gt;</Link>
+                            <Link className="text-[#0066cc]">Learn more &gt;</Link>
                         </span>
                         <span>
-                            <Link className="text-[#2997ff]">Watch a Film </Link>
+                            <Link className="text-[#0066cc]">Watch a Film </Link>
                         </span>
                     </p>
                 </div>
@@ -177,7 +189,7 @@ export default function Watch() {
                         <Link> Buy</Link>
                     </button>
                     <p className="text-[21px]">
-                        <Link className="text-[#2997ff]">Learn more &gt;</Link>
+                        <Link className="text-[#0066cc]">Learn more &gt;</Link>
                     </p>
                 </div>
                 <div className="watchUltra h-[628px]"></div>
@@ -195,7 +207,7 @@ export default function Watch() {
                         >
                             <Link> Buy</Link>
                         </button>
-                        <Link className="text-[#2997ff]">Learn more &gt;</Link>
+                        <Link className="text-[#0066cc]">Learn more &gt;</Link>
                     </p>
                 </div>
                 <div className="watchSE mt-4 h-[650px]"></div>
@@ -207,13 +219,255 @@ export default function Watch() {
                     <h2 className="text-[48px] my-3 font-semibold tracking-tight">And Apple.</h2>
 
                     <p className="text-[21px]">
-                        <Link className="text-[#2997ff]">Learn more &gt;</Link>
+                        <Link className="text-[#0066cc]">Learn more &gt;</Link>
                     </p>
                 </div>
                 <div className="carbon-neutral h-[390px]"></div>
             </div>
-            <div className=" bg-white">
-                <h1 className="text-center text-[48px] tracking-thicker pt-16 pb-16 font-semibold">Which Apple Watch is right for you?</h1>
+            <h1 className="text-center text-[48px] tracking-thicker pt-16 pb-16 font-semibold">Which Apple Watch is right for you?</h1>
+            <div className="w-[980px] mx-auto grid grid-cols-3">
+                <div className="text-center">
+                    <img src={comp_se} className="w-56 mx-auto mb-4" alt="" />
+                    <div className="flex h-4 mb-4 justify-center items-center gap-2">
+                        <div className="rounded-full w-3 h-3 bg-[#1a2530]"></div>
+                        <div className="rounded-full w-3 h-3 mx-1 bg-[#ded6d1]"></div>
+                        <div className="rounded-full w-3 h-3 bg-[#e0e0e0]"></div>
+                    </div>
+                    <h2 className="text-[21px] font-semibold tracking-tight mb-4">Apple Watch SE</h2>
+                    <h3 className=" text-[14px]">All the Essenstials.</h3>
+                    <h3 className=" text-[14px] mb-6">Light on Price.</h3>
+                    <h3 className="mb-4">From $249 </h3>
+                    <button
+                        type="button"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >
+                        <Link> Buy</Link>
+                    </button>
+                    <p className="pb-6 mx-12 border-b-2 border-b-gray-500">
+                        <Link className="text-[#0066cc]">Learn more &gt;</Link>
+                    </p>
+                </div>
+                <div className="text-center">
+                    <img src={comp_s9} className="w-56 mx-auto mb-4" alt="" />
+                    <div className="flex h-4 mb-4 justify-center items-center gap-2">
+                        <div className="rounded-full w-3 h-3 bg-[#1a2530]"></div>
+                        <div className="rounded-full w-3 h-3 mx-1 bg-[#ded6d1]"></div>
+                        <div className="rounded-full w-3 h-3 bg-[#e0e0e0]"></div>
+                        <div className="rounded-full w-3 h-3 bg-[#fadcde]"></div>
+                        <div className="rounded-full w-3 h-3 bg-[#d61139]"></div>
+                        <div className="rounded-full w-3 h-3 bg-[#3e3a36]"></div>
+                        <div className="rounded-full w-3 h-3 bg-[#e6e6e7]"></div>
+                        <div className="rounded-full w-3 h-3 bg-[#d4bda1]"></div>
+                    </div>
+                    <h2 className="text-[21px] font-semibold tracking-tight mb-4">Apple Watch Series 9</h2>
+                    <h3 className=" text-[14px]">Powerfull Sensors.</h3>
+                    <h3 className=" text-[14px] mb-6">advanced health features.</h3>
+                    <h3 className="mb-4">From $399 </h3>
+                    <button
+                        type="button"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >
+                        <Link> Buy</Link>
+                    </button>
+                    <p className="pb-6 mx-12 border-b-2 border-b-gray-500">
+                        <Link className="text-[#0066cc]">Learn more &gt;</Link>
+                    </p>
+                </div>
+                <div className="text-center">
+                    <img src={comp_ultra} className="w-56 mx-auto mb-4" alt="" />
+                    <div className="flex h-4 mb-4 justify-center items-center gap-2">
+                        <div className="rounded-full w-3 h-3 bg-[#ccc4bc]"></div>
+                    </div>
+                    <h2 className="text-[21px] font-semibold tracking-tight mb-4">Apple Watch ULTRA 2</h2>
+                    <h3 className=" text-[14px]">The most rugged</h3>
+                    <h3 className=" text-[14px] mb-6">and capable</h3>
+                    <h3 className="mb-4">From $799 </h3>
+                    <button
+                        type="button"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >
+                        <Link> Buy</Link>
+                    </button>
+                    <p className="pb-6 mx-12 border-b-2 border-b-gray-500">
+                        <Link className="text-[#0066cc]">Learn more &gt;</Link>
+                    </p>
+                </div>
+            </div>
+            <div className="my-8">
+                <p className="pb-6 text-center">
+                    <span className="me-6">
+                        <Link className="text-[#0066cc] text-2xl">Compare all modals &gt;</Link>
+                    </span>
+                    <span>
+                        <Link className="text-[#0066cc] text-2xl">Shop Apple Watch &gt;</Link>
+                    </span>
+                </p>
+            </div>
+            <div className="bg-[#f5f5f7] mb-6 mx-24 py-32 pe-16">
+                <div className="grid grid-cols-2 gap-16  h-[470px]">
+                    <div className="flex flex-col w-[480px] mx-auto text-center justify-center items-center px-12">
+                        <div>
+                            <h2 className="text-[24px] tracking-tight mb-4">Family Setup</h2>
+                            <p className="text-[48px] font-semibold tracking-tight leading-10 mb-4">
+                                Your family joined <br />
+                                at the wrist.
+                            </p>
+                            <p className="text-[21px] font-medium tracking-tight mb-4">Now family members who don’t have an iPhone can stay in touch with Apple Watch.</p>
+                            <p className="pb-6 mx-12">
+                                <button type="button" class="text-[#0066cc] bg-transparent hover:underline border border-[#0066cc] rounded-full text-sm px-3 py-1 text-center me-4">
+                                    <Link>Learn More</Link>
+                                </button>
+                                <Link className="text-[#0066cc]">Shop Apple Watch &gt;</Link>
+                            </p>
+                        </div>
+                    </div>
+                    <div className="family-setup"></div>
+                </div>
+            </div>
+            <div className="bg-[#f5f5f7] mb-6 mx-24 py-12 pe-16">
+                <div className="h-[500px] fitness-plus grid grid-cols-2 gap-16">
+                    <div className=""></div>
+                    <div className="flex flex-col text-center justify-center items-center px-12">
+                        <div>
+                            <h2 className="mb-4">
+                                <img src={logo_fitness} className="h-8 mx-auto" alt="" />
+                            </h2>
+                            <p className="text-[21px] mb-4">
+                                From HIIT to Maditation <br />
+                                There is something for everyone.
+                            </p>
+                            <p className="">
+                                <span className="me-6">
+                                    <Link className="text-[#0066cc]">Try it free &#8599;</Link>
+                                </span>
+                                <Link className="text-[#0066cc]">Learn More &gt;</Link>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className=" mx-24 mb-6">
+                <div className="flex justify-around">
+                    <div className="w-[458px] text-center mx-auto pt-20 px-11 pb-12">
+                        <h2 className="text-[48px] mb-6 font-semibold tracking-tight leading-[45px]">
+                            Get upto $185 <br /> towards a new <br /> Apple Watch.
+                        </h2>
+                        <p className="text-[21px] tracking-tight mb-6">With Apple Trade In, just give us your eligible Apple Watch and get credit for a new one. It’s good for you and the planet.</p>
+                        <p className="">
+                            <Link className="text-[#0066cc]">Find Your Trade-In value &gt;</Link>
+                        </p>
+                    </div>
+                    <div className="w-[458px] text-center mx-auto pt-20 px-11 pb-12">
+                        <h2 className="text-[48px] mb-6 font-semibold tracking-tight leading-[3.5rem]">
+                            Apply Card <br /> Monthly <br /> Installments.
+                        </h2>
+                        <p className="text-[21px] tracking-tight mb-6">
+                            Pay for Your new Aple Watch over <br /> 12 months interent-free with Apple Card
+                        </p>
+                        <p className="">
+                            <Link className="text-[#0066cc]">Learn More &gt;</Link>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="bg-[#f5f5f7] mb-6 mx-24 py-24">
+                <div className="text-center">
+                    <div>
+                        <h2 className="mb-7 text-[28px]"> Apple Watch Studio</h2>
+                        <p className="text-[48px] mb-4 tracking-tight font-medium leading-[3rem]">
+                            Any Case. Any Band. <br />
+                            Any Style you want.
+                        </p>
+                        <button class="bg-gradient-to-r from-yellow-500 via-red-500 to-blue-500 font-semibold rounded-full p-0.5">
+                            <span class="flex w-full bg-white hover:text-[#0066cc] rounded-full p-2 cursor-pointer">Create Your Style</span>
+                        </button>
+                    </div>
+                </div>
+                <div className=" h-[500px] mt-12 cto-bands relative">
+                    <div className="h-[500px] flex justify-center items-center">
+                        <img src={cto_case} className="h-[500px] " alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className="h-[760px] mx-24 mb-6">
+                <div className="grid grid-cols-2 gap-x-6">
+                    <div className="h-[760px] pt-20 text-center bg-[#f5f5f7] why-apple-watch">
+                        <h1 className="text-2xl tracking-tight mb-6">Why Apple Watch</h1>
+                        <h2 className="text-[48px] font-semibold mb-6 tracking-tight mx-20 leading-[3rem]">
+                            It's the Ultimate device <br /> for a healthy life
+                        </h2>
+                        <p className="">
+                            <Link className="text-[#0066cc] text-xl">Learn More &gt;</Link>
+                        </p>
+                    </div>
+                    <div className="h-[760px] pt-20 text-center bg-[#f5f5f7] watchOS">
+                        <h1 className="text-2xl tracking-tight mb-6">WatchOS 10</h1>
+                        <h2 className="text-[48px] font-semibold mb-6 tracking-tight mx-20 leading-[3rem]">
+                            Everything You love. <br /> Like never before.
+                        </h2>
+                        <p className="">
+                            <Link className="text-[#0066cc] text-xl">Learn More &gt;</Link>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="w-[1100px] mx-auto">
+                <div className="grid grid-cols-3 gap-2 py-20 text-center">
+                    <div className="px-12">
+                        <img src={icon2} className="h-[90px] mx-auto mb-3" />
+                        <h3 className="text-[21px] font-semibold mb-3 tracking-tight">Fast Delivery or Pick up </h3>
+                        <p className="text-[19px] tracking-tight mb-4">Enjoy two-hour delivery from an Apple&nbsp;Store, free delivery, or&nbsp;easy&nbsp;pickup.</p>
+                        <p className="">
+                            <Link className="text-[#0066cc] text-xl">Learn More &gt;</Link>
+                        </p>
+                    </div>
+                    <div>
+                        <img src={icon1} className="h-[90px] mx-auto mb-3" />
+                        <h3 className="text-[21px] font-semibold mb-3 tracking-tight">
+                            Apple Card <br />
+                            Monthly Installments
+                        </h3>
+                        <p className="text-[19px] tracking-tight mb-4">
+                            Pay for your new Apple&nbsp;Watch over time, interest‑free when you choose to check out with Apple&nbsp;Card Monthly&nbsp;Installments.
+                        </p>
+                        <p className="">
+                            <Link className="text-[#0066cc] text-xl">Learn More &gt;</Link>
+                        </p>
+                    </div>
+                    <div>
+                        <img src={icon3} className="h-[90px] mx-auto mb-3" />
+                        <h3 className="text-[21px] font-semibold mb-3 tracking-tight">Get Help Buying</h3>
+                        <p className="text-[19px] tracking-tight mb-4">Have a question? Call a Specialist or chat online. Call 1‑800‑MY‑APPLE.</p>
+                        <p className="">
+                            <Link className="text-[#0066cc] text-xl">Contact Us &gt;</Link>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h1 className="text-[56px] text-center font-semibold tracking-tight mt-28 mb-12">Apple Watch Assentails</h1>
+            <div className="h-[720px] mx-24 mb-6">
+                <div className="grid grid-cols-2 gap-x-6">
+                    <div className="h-[720px] pt-16 text-center bg-[#f5f5f7] watch-bands">
+                        <h2 className="text-[48px] font-semibold mb-6 tracking-tight mx-20 leading-[3rem]">
+                            Arm Candy. <br /> In All new Flavours.
+                        </h2>
+                        <p className="">
+                            <Link className="text-[#0066cc] text-xl">Shop the Letest Bands &gt;</Link>
+                        </p>
+                    </div>
+                    <div className="h-[720px] pt-20 text-center bg-[#f5f5f7] watch-headphone">
+                        <h2 className="text-[48px] font-semibold mb-6 tracking-tight mx-20 leading-[3rem]">
+                            Magic runs in <br />
+                            the family.
+                        </h2>
+                        <p className="text-[21px] tracking-tight my-4 mx-8">
+                            Explore all Airpods modals <br /> and find the best one for you.
+                        </p>
+                        <p className="">
+                            <Link className="text-[#0066cc] text-xl">Learn More &gt;</Link>
+                        </p>
+                    </div>
+                </div>
             </div>
         </>
     );
