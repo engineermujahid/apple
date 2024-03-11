@@ -8,10 +8,20 @@ import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/
 import acc1 from '../../images/accordion1.png';
 import acc2 from '../../images/accordion2.png';
 import acc3 from '../../images/accordion3.png';
+import { useBag } from '../../components/BagProvider';
 
 
 export default function Mac() {
     const [expanded, setExpanded] = useState(false);
+    const { addToBag } = useBag();
+
+    const handleBuy = (name, price) => {
+        const item = {
+            name: name,
+            price: price,
+        };
+        addToBag(item); // Call addToBag function to add the item to the bag
+    };
 
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
@@ -173,7 +183,7 @@ export default function Mac() {
 
                         <div className='flex mt-10 items-center'>
                             <h2 className='bg-blue-600 text-white rounded-3xl px-6 py-2 hover:bg-blue-500 hover:cursor-pointer'>Learn more</h2>
-                            <h2 className='text-blue-500 ml-9 hover:underline hover:cursor-pointer'>Order now &gt;</h2>
+                            <h2 className='text-blue-500 ml-9 hover:underline hover:cursor-pointer' onClick={() => handleBuy('MacBook Air 13” and 15”', 999)}>Order now &gt;</h2>
                         </div>
 
                         <div className='mt-8 border-b-black border-b'></div>
@@ -214,7 +224,7 @@ export default function Mac() {
 
                         <div className='flex mt-10 items-center'>
                             <h2 className='bg-blue-600 text-white rounded-3xl px-6 py-2 hover:bg-blue-500 hover:cursor-pointer'>Learn more</h2>
-                            <h2 className='text-blue-500 ml-9 hover:underline hover:cursor-pointer'>Buy &gt;</h2>
+                            <button className='text-blue-500 ml-9 hover:underline hover:cursor-pointer' onClick={() => handleBuy('MacBook Pro 16”', 1599)}>Buy &gt;</button>
                         </div>
 
                         <div className='mt-[33px] border-b-black border-b -mx-8'></div>
