@@ -102,7 +102,7 @@ export default function Ipad() {
                 </div>
             </div>
             <div className="bg-[#1d1d1f] py-3 text-[#f5f5f7]">
-                <div class="w-[92%] min-[734px]:w-[80%] mx-auto text-center text-sm">
+                <div className="w-[92%] min-[734px]:w-[80%] mx-auto text-center text-sm">
                     <p>Get 3% Daily Cash back with Apple&nbsp;Card. And pay for your new iPad over 12 months, interest-free when you choose to check out with Apple&nbsp;Card Monthly Installments.</p>
                     <Link className="text-[#2997ff]">Learn more &gt;</Link>
                 </div>
@@ -121,7 +121,7 @@ export default function Ipad() {
                             <h3 className="mb-3">From $799 </h3>
                             <button
                                 type="button"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                 onClick={() => handleBuy("iPad Pro", 799)}
                             >
                                 <Link> Buy</Link>
@@ -147,7 +147,7 @@ export default function Ipad() {
                             <h3 className="mb-3">From $499 </h3>
                             <button
                                 type="button"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                 onClick={() => handleBuy("iPad", 499)}
                             >
                                 <Link> Buy</Link>
@@ -181,7 +181,7 @@ export default function Ipad() {
                                     <h3 className="mb-3">From $799 </h3>
                                     <button
                                         type="button"
-                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                        className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                         onClick={() => handleBuy("iPad Pro", 799)}
                                     >
                                         <Link> Buy</Link>
@@ -200,7 +200,7 @@ export default function Ipad() {
                                     <h3 className="mb-3">From $599 </h3>
                                     <button
                                         type="button"
-                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                        className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                         onClick={() => handleBuy("iPad Air", 599)}
                                     >
                                         <Link> Buy</Link>
@@ -220,7 +220,7 @@ export default function Ipad() {
                                     <h3 className="mb-3">From $499 </h3>
                                     <button
                                         type="button"
-                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                        className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                         onClick={() => handleBuy("iPad", 499)}
                                     >
                                         <Link> Buy</Link>
@@ -240,7 +240,7 @@ export default function Ipad() {
                                     <h3 className="mb-3">From $999 </h3>
                                     <button
                                         type="button"
-                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                        className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                         onClick={() => handleBuy("iPad", 999)}
                                     >
                                         <Link> Buy</Link>
@@ -259,7 +259,7 @@ export default function Ipad() {
                                     <h3 className="mb-3">From $499 </h3>
                                     <button
                                         type="button"
-                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                        className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     >
                                         <Link> Buy</Link>
                                     </button>

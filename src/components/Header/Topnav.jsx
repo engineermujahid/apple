@@ -34,8 +34,8 @@ export default function Topnav() {
 
     return (
         <>
-            <header className='text-[#d0d0d0] h-11 fixed w-full top-0 z-50'>
-                <nav className='mx-auto w-full max-w-[1024px] flex items-center justify-between'>
+            <header className='text-[#d0d0d0] h-14 fixed w-full top-0 z-50'>
+                <nav className='mx-auto w-full max-w-[1024px] flex items-center justify-between py-2'>
                     <div className='px-2 text-2xl' >
                         <span className='cursor-pointer'>
                             <Link to="/">
@@ -51,15 +51,18 @@ export default function Topnav() {
                             <li onClick={toggleMenu} className='text-2xl font-bold min-[840px]:font-normal min-[840px]:text-sm px-12 min-[840px]:px-3 py-1'><Link to="ipad">Ipad</Link></li>
                             <li onClick={toggleMenu} className='text-2xl font-bold min-[840px]:font-normal min-[840px]:text-sm px-12 min-[840px]:px-3 py-1'><Link to="iphone">Iphone</Link></li>
                             <li onClick={toggleMenu} className='text-2xl font-bold min-[840px]:font-normal min-[840px]:text-sm px-12 min-[840px]:px-3 py-1'><Link to="watch">Watch</Link></li>
-                            <li onClick={toggleMenu} className='text-2xl font-bold min-[840px]:font-normal min-[840px]:text-sm px-12 min-[840px]:px-3 py-1'><Link to="accessories">Accessories</Link></li>
-                            <li onClick={toggleMenu} className='text-2xl font-bold min-[840px]:font-normal min-[840px]:text-sm px-12 min-[840px]:px-3 py-1'><Link to="support">Support</Link></li>
+                            {/* <li onClick={toggleMenu} className='text-2xl font-bold min-[840px]:font-normal min-[840px]:text-sm px-12 min-[840px]:px-3 py-1'><Link to="accessories">Accessories</Link></li>
+                            <li onClick={toggleMenu} className='text-2xl font-bold min-[840px]:font-normal min-[840px]:text-sm px-12 min-[840px]:px-3 py-1'><Link to="support">Support</Link></li> */}
                         </ul >
                     </div >
                     <div className='flex gap-2 me-3'>
-                        <button type="button" class="text-xl px-3 py-2 hover:font-bold delay-100">
+                        {/* <button type="button" className="text-xl px-3 py-2 hover:font-bold delay-100">
                             <IoSearchSharp />
+                        </button> */}
+                        <button type="button" className="text-lg px-4 py-1 hover:bg-neutral-200 duration-500 hover:text-black  border-gray-800 border-2 rounded-full">
+                            <Link to="login">Login</Link>
                         </button>
-                        <button type="button" class="text-xl px-3 py-2 delay-100" onClick={handleBagClick}>
+                        <button type="button" className="text-xl px-3 py-2 delay-100" onClick={handleBagClick}>
                             <BsBag />
                             {/* Dropdown for bag items */}
                             {showBagDropdown && (

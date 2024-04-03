@@ -134,7 +134,7 @@ export default function Watch() {
                 </div>
             </div>
             <div className="bg-[#1d1d1f] py-3 text-[#f5f5f7]">
-                <div class="w-[92%] min-[734px]:w-[80%] mx-auto text-center text-sm">
+                <div className="w-[92%] min-[734px]:w-[80%] mx-auto text-center text-sm">
                     <p>
                         Get 3 months of Apple Fitness+ When you buy an Apple Wathc.
                         <Link className="text-[#2997ff]">Learn more &gt;</Link>
@@ -148,7 +148,7 @@ export default function Watch() {
                     <h3 className="mb-3 text-[21px]">From $399 </h3>
                     <button
                         type="button"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         onClick={() => handleBuy('Apple Watch S9', 399)}
                     >
                         <Link> Buy</Link>
@@ -171,7 +171,7 @@ export default function Watch() {
                     <h3 className="mb-3 text-[21px]">From $799 </h3>
                     <button
                         type="button"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         onClick={() => handleBuy('Apple Watch Ultra 2', 799)}
                     >
                         <Link> Buy</Link>
@@ -190,7 +190,7 @@ export default function Watch() {
                     <p className="text-[21px]">
                         <button
                             type="button"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                             onClick={() => handleBuy('Apple Watch SE', 249)}
                         >
                             <Link> Buy</Link>

@@ -8,6 +8,7 @@ import Iphone from "./Iphone";
 import Watch from "./Watch";
 import Accessories from "./Accessories";
 import Suppoert from "./Suppoert";
+import Login from "../Auth/Login";
 
 export default function index() {
     return (
@@ -21,6 +22,7 @@ export default function index() {
                 <Route path="watch" element={<Watch />} />
                 <Route path="accessories" element={<Accessories />} />
                 <Route path="support" element={<Suppoert />} />
+                <Route path="login" element={<Login />} />
                 <Route path="*" element={<>404 Page not Found</>} />
             </Routes>
         </>

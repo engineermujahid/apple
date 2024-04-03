@@ -38,7 +38,7 @@ export default function Footer() {
                     <div className='mt-5 grid grid-cols-5 gap-x-4'>
                         <div>
                             <h3 className='mb-1.5 font-semibold'>Shop and Learn</h3>
-                            <ul class="opacity-55 mb-3">
+                            <ul className="opacity-55 mb-3">
                                 <li className='mb-1.5 hover:underline'><Link >Store</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Mac</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >iPad</Link></li>
@@ -52,7 +52,7 @@ export default function Footer() {
                                 <li className='mb-1.5 hover:underline'><Link >Gift Cards</Link></li>
                             </ul>
                             <h3 className='mb-1.5 font-semibold'>Apple Wallet</h3>
-                            <ul class="opacity-55 mb-3">
+                            <ul className="opacity-55 mb-3">
                                 <li className='mb-1.5 hover:underline'><Link >Wallet</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Apple Card</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Apple Pay</Link></li>
@@ -62,13 +62,13 @@ export default function Footer() {
 
                         <div>
                             <h3 className='mb-1.5 font-semibold'>Account</h3>
-                            <ul class="opacity-55 mb-3">
+                            <ul className="opacity-55 mb-3">
                                 <li className='mb-1.5 hover:underline'><Link >Manage Your Apple ID</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Apple Store Account</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >iCloud.com</Link></li>
                             </ul>
                             <h3 className='mb-1.5 font-semibold'>Entertainment</h3>
-                            <ul class="opacity-55 mb-3">
+                            <ul className="opacity-55 mb-3">
                                 <li className='mb-1.5 hover:underline'><Link >Apple One</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Apple TV+</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Apple Music</Link></li>
@@ -82,7 +82,7 @@ export default function Footer() {
                         </div>
                         <div>
                             <h3 className='mb-1.5 font-semibold'>Apple Store</h3>
-                            <ul class="opacity-55 mb-3">
+                            <ul className="opacity-55 mb-3">
                                 <li className='mb-1.5 hover:underline'><Link >Find a Store</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Genius Bar</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Today at Apple</Link></li>
@@ -98,31 +98,31 @@ export default function Footer() {
                         </div>
                         <div>
                             <h3 className='mb-1.5 font-semibold'>For Business</h3>
-                            <ul class="opacity-55 mb-3">
+                            <ul className="opacity-55 mb-3">
                                 <li className='mb-1.5 hover:underline'><Link >Apple and Business</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Shop For Business</Link></li>
                             </ul>
                             <h3 className='mb-1.5'>For Education</h3>
-                            <ul class="opacity-55 mb-3">
+                            <ul className="opacity-55 mb-3">
                                 <li className='mb-1.5 hover:underline'><Link >Apple and Education</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Shop for K-12</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Shop for Collage</Link></li>
                             </ul>
                             <h3 className='mb-1.5 font-semibold'>For Health</h3>
-                            <ul class="opacity-55 mb-3">
+                            <ul className="opacity-55 mb-3">
                                 <li className='mb-1.5 hover:underline'><Link >Apple in Healthcare</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Health on Apple Watch</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Health record on iPhone</Link></li>
                             </ul>
                             <h3 className='mb-1.5 font-semibold'>For Government</h3>
-                            <ul class="opacity-55 mb-3">
+                            <ul className="opacity-55 mb-3">
                                 <li className='mb-1.5 hover:underline'><Link >Shop for Government</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Shop for Vaterans and Military</Link></li>
                             </ul>
                         </div>
                         <div>
                             <h3 className='mb-1.5 font-semibold'>Apple Values</h3>
-                            <ul class="opacity-55 mb-3">
+                            <ul className="opacity-55 mb-3">
                                 <li className='mb-1.5 hover:underline'><Link >Accessibility</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Education</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Enviornment</Link></li>
@@ -132,7 +132,7 @@ export default function Footer() {
                                 <li className='mb-1.5 hover:underline'><Link >Supplier Responsibility</Link></li>
                             </ul>
                             <h3 className='mb-1.5 font-semibold'>About Apple</h3>
-                            <ul class="opacity-55 mb-3">
+                            <ul className="opacity-55 mb-3">
                                 <li className='mb-1.5 hover:underline'><Link >Newsroom</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Apple Leadership</Link></li>
                                 <li className='mb-1.5 hover:underline'><Link >Career Opportunities</Link></li>
