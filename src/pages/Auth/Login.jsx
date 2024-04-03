@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import { jwtDecode } from "jwt-decode";
 
 
 export default function Login() {
@@ -29,12 +30,23 @@ export default function Login() {
 
     const handleSignup = async (e) => {
         e.preventDefault()
-        axios.post('http://localhost:8000/register', JSON.stringify(formData), { headers: { 'Content-Type': 'application/json' } })
-            .then((res) => {
-                console.log(res)
-                navigate('/', { replace: true });
-            })
-            .catch(err => console.error(err.response.data))
+        if (loginState === 'SignUp') {
+            axios.post('http://localhost:8000/register', JSON.stringify(formData), { headers: { 'Content-Type': 'application/json' } })
+                .then((res) => {
+                    console.log(res)
+                    navigate('/', { replace: true });
+                })
+                .catch(err => console.error(err.response.data))
+        }
+        else if (loginState === 'Login') {
+            axios.post('http://localhost:8000/signIn', JSON.stringify(formData), { headers: { 'Content-Type': 'application/json' } })
+                .then((res) => {
+                    const decodedToken = jwtDecode(res.data.token)
+                    console.log('User id: ', decodedToken.id)
+                    navigate('/', { replace: true });
+                })
+                .catch(err => console.error(err.response.data))
+        }
     }
     return (
         <div>
