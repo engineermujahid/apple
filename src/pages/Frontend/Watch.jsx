@@ -19,9 +19,7 @@ import logoWatchS9 from "../../assets/images/apppleWatch/logo_watch_s9.png";
 import logoWatchultra2 from "../../assets/images/apppleWatch/logo_watch_ultra_2.png";
 import logoWatSE from "../../assets/images/apppleWatch/logo_watch_se.png";
 import logoCarbonNeutral from "../../assets/images/apppleWatch/logo_carbon_neutral.png";
-<<<<<<< HEAD
 import { useBag } from "../../components/BagProvider";
-=======
 import comp_se from "../../assets/images/apppleWatch/compare_se.jpg";
 import comp_s9 from "../../assets/images/apppleWatch/compare_s9.jpg";
 import comp_ultra from "../../assets/images/apppleWatch/compare_ultra2.jpg";
@@ -31,7 +29,6 @@ import cto_case from "../../assets/images/apppleWatch/cto-case.png";
 import icon1 from "../../assets/images/apppleWatch/icon_1.svg";
 import icon2 from "../../assets/images/apppleWatch/icon_2.svg";
 import icon3 from "../../assets/images/apppleWatch/icon_3.svg";
->>>>>>> 2563b06 (watch page completed)
 
 export default function Watch() {
     const { addToBag } = useBag();
@@ -161,7 +158,7 @@ export default function Watch() {
                     <button
                         type="button"
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        onClick={() => handleBuy('Apple Watch S9', 399)}
+                        onClick={() => handleBuy("Apple Watch S9", 399)}
                     >
                         <Link> Buy</Link>
                     </button>
@@ -184,7 +181,7 @@ export default function Watch() {
                     <button
                         type="button"
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        onClick={() => handleBuy('Apple Watch Ultra 2', 799)}
+                        onClick={() => handleBuy("Apple Watch Ultra 2", 799)}
                     >
                         <Link> Buy</Link>
                     </button>
@@ -203,7 +200,7 @@ export default function Watch() {
                         <button
                             type="button"
                             class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            onClick={() => handleBuy('Apple Watch SE', 249)}
+                            onClick={() => handleBuy("Apple Watch SE", 249)}
                         >
                             <Link> Buy</Link>
                         </button>
