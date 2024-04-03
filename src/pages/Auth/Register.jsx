@@ -1,46 +1,58 @@
 import { message } from "antd";
+import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 import React from "react";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 export default function Register() {
-    const [state, setState] = useState({ firstName: "", lastName: "", email: "", password: "", imageURL: "", confirmPassword: "", userName: "", gender: "", birthDate: "" });
+    const [state, setState] = useState({ firstName: "", lastName: "", email: "", password: "", imageURL: "", userName: "", gender: "", birthDate: "" });
     const navigate = useNavigate();
 
     const handleChange = (e) => setState((s) => ({ ...s, [e.target.name]: e.target.value }));
 
     function Submit(e) {
         e.preventDefault();
-        let { firstName, lastName, email, password, birthDate, confirmPassword, imageURL, userName, gender } = state;
+        let { firstName, lastName, email, password, birthDate, imageURL, userName, gender } = state;
         firstName = firstName.trim();
         lastName = lastName.trim();
         userName = userName.trim();
         gender = gender.trim();
         email = email.trim();
         password = password.trim();
-        confirmPassword = confirmPassword.trim();
-        if (firstName.length < 3) {
-            return message.error("Enter first name properly");
-        }
-        if (lastName.length < 3) return message.error("Enter last name properly");
-        if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
-            return message.error("Enter a valid email address");
-        }
+        // confirmPassword = confirmPassword.trim();
+        // if (firstName.length < 3) {
+        //     return message.error("Enter first name properly");
+        // }
+        // if (lastName.length < 3) return message.error("Enter last name properly");
+        // if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
+        //     return message.error("Enter a valid email address");
+        // }
+        setState(firstName, lastName, email, password, birthDate, imageURL, userName, gender);
+        console.log(state);
+        axios
+            .post("http://localhost:8000/user/register", JSON.stringify(state), { headers: { "Content-Type": "application/json" } })
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
 
-        const users = { message: "From database" };
-        let user = users.find((user) => user.email === email);
-        if (!user) {
-            if (password !== confirmPassword) {
-                return message.error("Password didn't matched. try again");
-            }
-            const newUser = { firstName, lastName, email, password, userName, gender, birthDate, imageURL };
-            console.log(newUser);
-            setTimeout(() => {
-                navigate("/auth/login");
-            }, [1000]);
-        } else {
-            message.error("This user already exits!");
-        }
+        // const users = { message: "From database" };
+        // let user = users.find((user) => user.email === email);
+        // if (!user) {
+        //     if (password !== confirmPassword) {
+        //         return message.error("Password didn't matched. try again");
+        //     }
+        //     const newUser = { firstName, lastName, email, password, userName, gender, birthDate, imageURL };
+        //     console.log(newUser);
+        //     setTimeout(() => {
+        //         navigate("/auth/login");
+        //     }, [1000]);
+        // } else {
+        //     message.error("This user already exits!");
+        // }
     }
 
     return (
@@ -51,7 +63,7 @@ export default function Register() {
                     <p className="text-[17px] tracking-normal text-center"> One Apple ID is all you need to access all Apple Services.</p>
                 </div>
                 <div className="w-[480px] mx-auto">
-                    <form className="gap-y-4" onSubmit={Submit}>
+                    <form className="gap-y-4">
                         <div className="grid grid-cols-2 gap-x-4">
                             <div className="relative mb-6">
                                 <input
@@ -165,7 +177,7 @@ export default function Register() {
                                 Password
                             </label>
                         </div>
-                        <div className="relative mb-6">
+                        {/* <div className="relative mb-6">
                             <input
                                 type="password"
                                 name="confirmPassword"
@@ -182,7 +194,7 @@ export default function Register() {
                             >
                                 Confirm Password
                             </label>
-                        </div>
+                        </div> */}
                         <div className="relative mb-3">
                             <input
                                 type="text"
@@ -222,6 +234,7 @@ export default function Register() {
                                 className="inline-block w-full rounded bg-blue-500 px-7 pb-2 pt-3 text-sm font-medium uppercase  text-white 
                                 shadow-blue-300 transition duration-150 ease-in-out hover:bg-blue-600 hover:shadow-2 
                                 focus:bg-blue-600 focus:outline-none focus:ring-0"
+                                onClick={Submit}
                             >
                                 Create Account
                             </button>

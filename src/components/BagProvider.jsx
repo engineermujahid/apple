@@ -4,6 +4,7 @@ const BagContext = createContext();
 
 export const BagProvider = ({ children }) => {
     const [bagItems, setBagItems] = useState([]);
+    const [userID, setUserID] = useState([]);
 
     useEffect(() => {
         console.log("Loading items from localStorage");
@@ -25,8 +26,12 @@ export const BagProvider = ({ children }) => {
     const clearBag = () => {
         setBagItems([]);
     };
+    const setUserId = (user) => {
+        setUserID(user);
+        localStorage.setItem("UserId", JSON.stringify(userID));
+    };
 
-    return <BagContext.Provider value={{ bagItems, addToBag, clearBag }}>{children}</BagContext.Provider>;
+    return <BagContext.Provider value={{ bagItems, addToBag, clearBag, userID, setUserId }}>{children}</BagContext.Provider>;
 };
 
 export const useBag = () => useContext(BagContext);
