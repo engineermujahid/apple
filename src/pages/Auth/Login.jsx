@@ -1,13 +1,14 @@
 import { message } from "antd";
 import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 
 import { useBag } from "../../components/BagProvider";
 
 export default function Login() {
-    const { userID, setUserId } = useBag();
+    const { userID, setUserId, setUserToken } = useBag();
+    const navigate = useNavigate();
 
     const [state, setState] = useState({ email: "", password: "" });
 
@@ -18,16 +19,17 @@ export default function Login() {
         let { email, password } = state;
         email = email.trim();
         password = password.trim();
-        setState(email, password);
+        console.log(email, password);
 
         // console.log(state);
         axios
-            .post("http://localhost:8000/user/login", JSON.stringify(state), { headers: { "Content-Type": "application/json" } })
+            .post("http://localhost:8000/user/login", JSON.stringify({ email: email, password: password }), { headers: { "Content-Type": "application/json" } })
             .then((res) => {
                 const tokenData = jwtDecode(res.data.token);
                 console.log({ res: res, token: tokenData });
                 setUserId(tokenData.id);
-                console.log(userID);
+                setUserToken(res.data.token);
+                navigate("/");
             })
             .catch((error) => {
                 console.log(error);

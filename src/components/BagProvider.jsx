@@ -5,12 +5,13 @@ const BagContext = createContext();
 export const BagProvider = ({ children }) => {
     const [bagItems, setBagItems] = useState([]);
     const [userID, setUserID] = useState([]);
+    const [token, setToken] = useState("");
 
     useEffect(() => {
-        console.log("Loading items from localStorage");
+        // console.log("Loading items from localStorage");
         const storedItems = JSON.parse(localStorage.getItem("bagItems"));
         if (storedItems) {
-            console.log("Loaded items:", storedItems);
+            // console.log("Loaded items:", storedItems);
             setBagItems(storedItems);
         }
     }, []);
@@ -30,8 +31,12 @@ export const BagProvider = ({ children }) => {
         setUserID(user);
         localStorage.setItem("UserId", JSON.stringify(userID));
     };
+    const setUserToken = (token) => {
+        setToken(token);
+        localStorage.setItem("token", JSON.stringify(token));
+    };
 
-    return <BagContext.Provider value={{ bagItems, addToBag, clearBag, userID, setUserId }}>{children}</BagContext.Provider>;
+    return <BagContext.Provider value={{ bagItems, addToBag, clearBag, userID, setUserId, setUserToken }}>{children}</BagContext.Provider>;
 };
 
 export const useBag = () => useContext(BagContext);

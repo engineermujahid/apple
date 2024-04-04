@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { IoSearchSharp } from "react-icons/io5";
 import { FaApple } from "react-icons/fa";
@@ -13,6 +13,8 @@ import { useBag } from "../BagProvider";
 
 export default function Topnav() {
     const [nav, setNav] = useState(true);
+    const navigate = useNavigate();
+    const token = JSON.parse(localStorage.getItem("token"));
     const [showBagDropdown, setShowBagDropdown] = useState(false);
     const { bagItems } = useBag();
     const { clearBag } = useBag();
@@ -25,15 +27,15 @@ export default function Topnav() {
         }
     };
 
-    const handleBagClick = () => {
-        setShowBagDropdown(!showBagDropdown);
-    };
+    // const handleBagClick = () => {
+    //     setShowBagDropdown(!showBagDropdown);
+    // };
 
     return (
         <>
             <header className="text-[#d0d0d0] h-11 w-full top-0 fixed z-50">
                 <div className="relative w-screen">
-                    <nav className="mx-auto w-full max-w-[1024px] flex items-center justify-between">
+                    <nav className="mx-auto w-full max-w-[1024px] h-11 flex items-center justify-between">
                         <div className="px-2 text-2xl">
                             <span className="cursor-pointer">
                                 <Link to="/">
@@ -61,23 +63,43 @@ export default function Topnav() {
                                 <li onClick={toggleMenu} className="text-2xl font-bold min-[840px]:font-normal min-[840px]:text-sm px-12 min-[840px]:px-3 py-1">
                                     <Link to="watch">Watch</Link>
                                 </li>
-                                <li onClick={toggleMenu} className="text-2xl font-bold min-[840px]:font-normal min-[840px]:text-sm px-12 min-[840px]:px-3 py-1">
+                                {/* <li onClick={toggleMenu} className="text-2xl font-bold min-[840px]:font-normal min-[840px]:text-sm px-12 min-[840px]:px-3 py-1">
                                     <Link to="accessories">Accessories</Link>
                                 </li>
                                 <li onClick={toggleMenu} className="text-2xl font-bold min-[840px]:font-normal min-[840px]:text-sm px-12 min-[840px]:px-3 py-1">
                                     <Link to="support">Support</Link>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
-                        <div className="flex gap-2 me-3">
-                            <button type="button" class="text-xl px-3 py-2 hover:font-bold delay-100">
+                        <div className="flex gap-2 me-3 items-center">
+                            {token ? (
+                                <>
+                                    <button type="button" class="text-xl px-3 py-2 delay-100">
+                                        <Link to="/bag">
+                                            <BsBag />
+                                        </Link>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            localStorage.removeItem("token");
+                                            navigate("/");
+                                        }}
+                                        className="text-sm px-3 py-0.5 bg-red-500 duration-200 hover:text-black  hover:bg-red-700  border-[#d0d0d0] border rounded-full"
+                                    >
+                                        Logout
+                                    </button>
+                                </>
+                            ) : (
+                                <button type="button" className="text-sm px-3 py-0.5 hover:bg-neutral-150 duration-500 hover:text-black  hover:bg-[#d0d0d0]  border-[#d0d0d0] border rounded-full">
+                                    <Link to="/auth/login">Login</Link>
+                                </button>
+                            )}
+                            {/* <button type="button" class="text-xl px-3 py-2 hover:font-bold delay-100">
                                 <IoSearchSharp />
-                            </button>
-                            <button type="button" class="text-xl px-3 py-2 delay-100" onClick={handleBagClick}>
-                                <BsBag />
-                            </button>
+                            </button> */}
                             {/* Dropdown for bag items */}
-                            {showBagDropdown && (
+                            {/* {showBagDropdown && (
                                 <div className="absolute top-11 left-0 w-screen min-h-[450px] px-4 py-16 bg-[#fafafc]">
                                     <div className="mx-auto w-full max-w-[1024px]">
                                         <div className="flex justify-between  mb-10">
@@ -126,14 +148,14 @@ export default function Topnav() {
                                                     <Link to="/auth/login">Sign In</Link>
                                                 </li>
                                             </ul>
-                                        </div>
+                                        </div> */}
 
-                                        {/* <button className="text-3xl text-red-500 text-center m-5" onClick={clearBag}>
+                            {/* <button className="text-3xl text-red-500 text-center m-5" onClick={clearBag}>
                                             Clear
                                         </button> */}
-                                    </div>
-                                </div>
-                            )}
+                            {/* </div> */}
+                            {/* </div> */}
+                            {/* )} */}
                             <button className="text-xl block min-[840px]:hidden" onClick={toggleMenu}>
                                 <AiOutlineMenu />
                             </button>
