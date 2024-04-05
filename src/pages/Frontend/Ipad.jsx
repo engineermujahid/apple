@@ -27,17 +27,29 @@ import tradein from "../../assets/images/ipad/trade_in.jpg";
 import pencil from "../../assets/images/ipad/apple_pencil.jpg";
 import smartkeyboard from "../../assets/images/ipad/smart_keyboard.jpg";
 import accessories from "../../assets/images/ipad/accessories.jpg";
-import { useBag } from "../../components/BagProvider";
+import axios from "axios";
+import { message } from "antd";
 // import ipadprohero from "../../assets/images/ipad/ipad_pro_hero.jpg";
 export default function Ipad() {
-    const { addToBag } = useBag();
+    const handleBuy = async (productId) => {
+        const quantity = 1;
+        const token = JSON.parse(localStorage.getItem("token"));
+        if (!token) {
+            message.error("You are not Logged In. Please Login to purchase");
+        }
 
-    const handleBuy = (name, price) => {
-        const item = {
-            name: name,
-            price: price,
-        };
-        addToBag(item); // Call addToBag function to add the item to the bag
+        axios
+            .post("http://localhost:8000/cart/addtocart", JSON.stringify({ quantity: quantity }), {
+                params: {
+                    productId: productId,
+                },
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                },
+            })
+            .then((res) => message.success("Product is added to cart successfully."))
+            .catch((res) => console.log(res.response));
     };
     return (
         <>
@@ -122,7 +134,7 @@ export default function Ipad() {
                             <button
                                 type="button"
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                onClick={() => handleBuy("iPad Pro", 799)}
+                                onClick={() => handleBuy("660ebb1550353b77a15345ba")}
                             >
                                 <Link> Buy</Link>
                             </button>
@@ -148,7 +160,7 @@ export default function Ipad() {
                             <button
                                 type="button"
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                onClick={() => handleBuy("iPad", 499)}
+                                onClick={() => handleBuy("660ebb7750353b77a15345b")}
                             >
                                 <Link> Buy</Link>
                             </button>
@@ -182,7 +194,7 @@ export default function Ipad() {
                                     <button
                                         type="button"
                                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                        onClick={() => handleBuy("iPad Pro", 799)}
+                                        onClick={() => handleBuy("660ebb1550353b77a15345ba")}
                                     >
                                         <Link> Buy</Link>
                                     </button>
@@ -201,7 +213,7 @@ export default function Ipad() {
                                     <button
                                         type="button"
                                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                        onClick={() => handleBuy("iPad Air", 599)}
+                                        onClick={() => handleBuy("660ebb4450353b77a15345bc")}
                                     >
                                         <Link> Buy</Link>
                                     </button>
@@ -221,7 +233,7 @@ export default function Ipad() {
                                     <button
                                         type="button"
                                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                        onClick={() => handleBuy("iPad", 499)}
+                                        onClick={() => handleBuy("660ebb7750353b77a15345be")}
                                     >
                                         <Link> Buy</Link>
                                     </button>
@@ -241,7 +253,7 @@ export default function Ipad() {
                                     <button
                                         type="button"
                                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                        onClick={() => handleBuy("iPad", 999)}
+                                        onClick={() => handleBuy("660ebba050353b77a15345c0")}
                                     >
                                         <Link> Buy</Link>
                                     </button>
@@ -259,6 +271,7 @@ export default function Ipad() {
                                     <h3 className="mb-3">From $499 </h3>
                                     <button
                                         type="button"
+                                        onClick={() => handleBuy("660ebbc250353b77a15345c2")}
                                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     >
                                         <Link> Buy</Link>

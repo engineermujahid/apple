@@ -14,12 +14,12 @@ export default function Register() {
     function Submit(e) {
         e.preventDefault();
         let { firstName, lastName, email, password, birthDate, imageURL, userName, gender } = state;
-        firstName = firstName.trim();
-        lastName = lastName.trim();
-        userName = userName.trim();
-        gender = gender.trim();
-        email = email.trim();
-        password = password.trim();
+        // firstName = firstName.trim();
+        // lastName = lastName.trim();
+        // userName = userName.trim();
+        // gender = gender.trim();
+        // email = email.trim();
+        // password = password.trim();
         // confirmPassword = confirmPassword.trim();
         // if (firstName.length < 3) {
         //     return message.error("Enter first name properly");

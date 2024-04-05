@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useBeforeUnload } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Watch.css";
 
 import watchNavAcc from "../../assets/images/apppleWatch/watch_nav_accessories.svg";
@@ -19,7 +19,7 @@ import logoWatchS9 from "../../assets/images/apppleWatch/logo_watch_s9.png";
 import logoWatchultra2 from "../../assets/images/apppleWatch/logo_watch_ultra_2.png";
 import logoWatSE from "../../assets/images/apppleWatch/logo_watch_se.png";
 import logoCarbonNeutral from "../../assets/images/apppleWatch/logo_carbon_neutral.png";
-import { useBag } from "../../components/BagProvider";
+
 import comp_se from "../../assets/images/apppleWatch/compare_se.jpg";
 import comp_s9 from "../../assets/images/apppleWatch/compare_s9.jpg";
 import comp_ultra from "../../assets/images/apppleWatch/compare_ultra2.jpg";
@@ -29,16 +29,29 @@ import cto_case from "../../assets/images/apppleWatch/cto-case.png";
 import icon1 from "../../assets/images/apppleWatch/icon_1.svg";
 import icon2 from "../../assets/images/apppleWatch/icon_2.svg";
 import icon3 from "../../assets/images/apppleWatch/icon_3.svg";
+import axios from "axios";
+import { message } from "antd";
 
 export default function Watch() {
-    const { addToBag } = useBag();
+    const handleBuy = async (productId) => {
+        const quantity = 1;
+        const token = JSON.parse(localStorage.getItem("token"));
+        if (!token) {
+            message.error("You are not Logged In. Please Login to purchase");
+        }
 
-    const handleBuy = (name, price) => {
-        const item = {
-            name: name,
-            price: price,
-        };
-        addToBag(item); // Call addToBag function to add the item to the bag
+        axios
+            .post("http://localhost:8000/cart/addtocart", JSON.stringify({ quantity: quantity }), {
+                params: {
+                    productId: productId,
+                },
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                },
+            })
+            .then((res) => message.success("Product is added to cart successfully."))
+            .catch((res) => console.log(res.response));
     };
     return (
         <>
@@ -158,7 +171,7 @@ export default function Watch() {
                     <button
                         type="button"
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        onClick={() => handleBuy("Apple Watch S9", 399)}
+                        onClick={() => handleBuy("660ebdde50353b77a15345d0")}
                     >
                         <Link> Buy</Link>
                     </button>
@@ -181,7 +194,7 @@ export default function Watch() {
                     <button
                         type="button"
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        onClick={() => handleBuy("Apple Watch Ultra 2", 799)}
+                        onClick={() => handleBuy("660ebdfe50353b77a15345d2")}
                     >
                         <Link> Buy</Link>
                     </button>
@@ -194,13 +207,13 @@ export default function Watch() {
             <div className="pt-8 mb-6 h-[732px] bg-[#f5f5f7] grid grid-cols-2">
                 <div className="pt-6 pb-9 flex flex-col items-center justify-center ">
                     <img src={logoWatSE} className="h-[52px] mx-auto" alt="" />
-                    <h2 className="text-[48px] my-3 font-semibold tracking-tight">NA great deal to love.</h2>
+                    <h2 className="text-[48px] my-3 font-semibold tracking-tight">A great deal to love.</h2>
                     <h3 className="mb-3 text-[21px]">From $249 </h3>
                     <p className="text-[21px]">
                         <button
                             type="button"
                             class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            onClick={() => handleBuy("Apple Watch SE", 249)}
+                            onClick={() => handleBuy("660ebdbf50353b77a15345ce")}
                         >
                             <Link> Buy</Link>
                         </button>
@@ -237,6 +250,7 @@ export default function Watch() {
                     <button
                         type="button"
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        onClick={() => handleBuy("660ebdbf50353b77a15345ce")}
                     >
                         <Link> Buy</Link>
                     </button>
@@ -262,6 +276,7 @@ export default function Watch() {
                     <h3 className="mb-4">From $399 </h3>
                     <button
                         type="button"
+                        onClick={() => handleBuy("660ebdde50353b77a15345d0")}
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
                         <Link> Buy</Link>
@@ -281,6 +296,7 @@ export default function Watch() {
                     <h3 className="mb-4">From $799 </h3>
                     <button
                         type="button"
+                        onClick={() => handleBuy("660ebdfe50353b77a15345d2")}
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center me-2 mb-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
                         <Link> Buy</Link>

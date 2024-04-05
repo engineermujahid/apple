@@ -22,10 +22,10 @@ export default function Cart() {
                         "Content-Type": "application/json",
                     },
                 });
-                setCartData(response.data.products);
+                setCartData(response?.data?.products);
                 // initializing quantity array from db
                 const array = [];
-                response.data.products.forEach((item, i) => {
+                response?.data?.products.forEach((item, i) => {
                     array.push(item.quantity);
                 });
                 setQuantity(array);
@@ -82,7 +82,7 @@ export default function Cart() {
                         </p>
                     </div>
                     {cartData &&
-                        cartData.map((item, index) => (
+                        cartData?.map((item, index) => (
                             <div key={index}>
                                 <div class="grid grid-cols-1 lg:grid-cols-2 min-[550px]:gap-6 border-t border-gray-200 py-6">
                                     <div class="flex items-center flex-col min-[550px]:flex-row gap-3 min-[550px]:gap-6 w-full max-xl:justify-center max-xl:max-w-xl max-xl:mx-auto">
