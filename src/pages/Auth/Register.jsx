@@ -34,6 +34,8 @@ export default function Register() {
             .post("http://localhost:8000/user/register", JSON.stringify(state), { headers: { "Content-Type": "application/json" } })
             .then((res) => {
                 console.log(res);
+                message.success("User created Successfully");
+                navigate("/auth/login");
             })
             .catch((error) => {
                 console.log(error);
