@@ -1,8 +1,15 @@
 import { message } from "antd";
+import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
+
+import { useBag } from "../../components/BagProvider";
 
 export default function Login() {
+    const { userID, setUserId, setUserToken } = useBag();
+    const navigate = useNavigate();
+
     const [state, setState] = useState({ email: "", password: "" });
 
     const handleChange = (e) => setState((s) => ({ ...s, [e.target.name]: e.target.value }));
@@ -12,20 +19,23 @@ export default function Login() {
         let { email, password } = state;
         email = email.trim();
         password = password.trim();
+        console.log(email, password);
 
-        // console.log(state)
-        const users = { message: "User collection from db" };
-        let user = users.find((user) => user.email === email);
-        if (user) {
-            if (user.password === password) {
-                localStorage.setItem("isLoggedIn", "true");
-                localStorage.setItem("currentUser", JSON.stringify(user));
-            } else {
-                message.error("Password isn't correct.");
-            }
-        } else {
-            message.error("User not found");
-        }
+        // console.log(state);
+        axios
+            .post("http://localhost:8000/user/login", JSON.stringify({ email: email, password: password }), { headers: { "Content-Type": "application/json" } })
+            .then((res) => {
+                const tokenData = jwtDecode(res.data.token);
+                console.log({ res: res, token: tokenData });
+                setUserId(tokenData.id);
+                setUserToken(res.data.token);
+                navigate("/");
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        // const users = { message: "User collection from db" };
     }
     return (
         <>
@@ -37,42 +47,40 @@ export default function Login() {
                     <h2 class="text-2xl text-center font-semibold tracking-tight md:text-2xl">Sign in to Apple Store</h2>
                 </div>
                 <div className="w-[480px] mx-auto">
-                    <form className="space-y-4" onSubmit={Submit}>
-                        <div className="relative mb-6">
-                            <input
-                                type="email"
-                                name="email"
-                                onChange={handleChange}
-                                className="peer block w-full rounded-md border bg-white px-3 py-3 leading-[2.15] border-slate-300
-                                transition-all duration-200 ease-linear
-                                 focus:ring-1 focus:border-blue-500 focus:ring-blue-500 focus:outline-none focus:pt-5 focus:pb-1"
-                                id="email"
-                            />
+                    <form className="space-y-4">
+                        <div className="mb-6">
                             <label
-                                className="after:content-['*'] after:ml-1 after:text-xl after:text-red-600 pointer-events-none absolute left-3 top-0 mb-0 origin-[0_0] 
-                                truncate pt-3 text-neutral-400 transition-all duration-200 ease-out peer-focus:-translate-y-[0.5rem] peer-focus:scale-[0.85] peer-focus:text-blue-500 peer-focus:after:hidden "
+                                className=" after:content-['*'] after:ml-1 after:text-xl after:text-red-600 pointer-events-none ms-3 pt-3 text-neutral-400 transition-all duration-200 ease-out peer-focus:-translate-y-[0.5rem] peer-focus:scale-[0.85] peer-focus:text-blue-500 peer-focus:after:hidden "
                                 htmlFor="email"
                             >
                                 Email address
                             </label>
+                            <input
+                                type="email"
+                                name="email"
+                                onChange={handleChange}
+                                className="block w-full rounded-md border bg-white px-3 py-3 leading-[2.15] border-slate-300
+                                transition-all duration-200 ease-linear
+                                 focus:ring-1 focus:border-blue-500 focus:ring-blue-500 focus:outline-none"
+                                id="email"
+                            />
                         </div>
-                        <div className="relative mb-6">
+                        <div className="mb-6">
+                            <label
+                                className="after:content-['*'] after:ml-1 after:text-xl after:text-red-600 pointer-events-none ms-3 pt-3 text-neutral-400 transition-all duration-200 ease-out peer-focus:-translate-y-[0.5rem] peer-focus:scale-[0.85] peer-focus:text-blue-500 peer-focus:after:hidden "
+                                htmlFor="password"
+                            >
+                                Password
+                            </label>
                             <input
                                 type="password"
                                 name="password"
                                 onChange={handleChange}
                                 className="peer block w-full rounded-md border bg-white px-3 py-3 leading-[2.15] border-slate-300
                                 transition-all duration-200 ease-linear
-                                 focus:ring-1 focus:border-blue-500 focus:ring-blue-500 focus:outline-none focus:pt-5 focus:pb-1"
+                                 focus:ring-1 focus:border-blue-500 focus:ring-blue-500 focus:outline-none"
                                 id="password"
                             />
-                            <label
-                                className="after:content-['*'] after:ml-1 after:text-xl after:text-red-600 pointer-events-none absolute left-3 top-0 mb-0 origin-[0_0] 
-                                truncate pt-3 text-neutral-400 transition-all duration-200 ease-out peer-focus:-translate-y-[0.5rem] peer-focus:scale-[0.85] peer-focus:text-blue-500 peer-focus:after:hidden "
-                                htmlFor="password"
-                            >
-                                Password
-                            </label>
                         </div>
                         <div>
                             <button
@@ -80,6 +88,7 @@ export default function Login() {
                                 className="inline-block w-full rounded bg-blue-500 px-7 pb-2 pt-3 text-sm font-medium uppercase  text-white 
                                 shadow-blue-300 transition duration-150 ease-in-out hover:bg-blue-600 hover:shadow-2 
                                 focus:bg-blue-600 focus:outline-none focus:ring-0"
+                                onClick={Submit}
                             >
                                 Login
                             </button>

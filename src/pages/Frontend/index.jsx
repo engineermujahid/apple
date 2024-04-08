@@ -9,6 +9,7 @@ import Watch from "./Watch";
 import Accessories from "./Accessories";
 import Suppoert from "./Suppoert";
 import Cart from "./Cart";
+import Checkout from "./Checkout";
 
 export default function index() {
     return (
@@ -23,6 +24,7 @@ export default function index() {
                 <Route path="accessories" element={<Accessories />} />
                 <Route path="support" element={<Suppoert />} />
                 <Route path="bag" element={<Cart />} />
+                <Route path="checkout" element={<Checkout />} />
                 <Route path="*" element={<>404 Page not Found</>} />
             </Routes>
         </>
