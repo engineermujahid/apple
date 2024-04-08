@@ -83,6 +83,7 @@ export default function Topnav() {
                                         type="button"
                                         onClick={() => {
                                             localStorage.removeItem("token");
+                                            // localStorage.setItem("token", JSON.stringify(""));
                                             navigate("/");
                                         }}
                                         className="text-sm px-3 py-0.5 bg-red-500 duration-200 hover:text-black  hover:bg-red-700  border-[#d0d0d0] border rounded-full"
